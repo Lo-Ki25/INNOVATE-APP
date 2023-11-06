@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation de deux dés</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;  /* Centre les éléments verticalement */
+            gap: 70px;
+        }
+
+        .dice {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .face {
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background: #ffffff;
+            border: 0px solid #ccc;
+            background-size: cover;
+        }
+
+        .front  { transform: rotateY(0deg)   translateZ(50px); }
+        .back   { transform: rotateY(180deg) translateZ(50px); }
+        .left   { transform: rotateY(-90deg) translateZ(50px); }
+        .right  { transform: rotateY(90deg)  translateZ(50px); }
+        .top    { transform: rotateX(90deg)  translateZ(50px); }
+        .bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+        button {
+            margin-top: 30px;
+            padding: 10px 10px;
+            font-size: 18px;
+            cursor: pointer;
+            horiz-align: right;
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <button onclick="rollDice()">Lancer les dés</button>
+    <div class="dice" id="dice1"></div>
+    <div class="dice" id="dice2"></div>
+
+</div>
+
+
+<script>
+    const faces = ['front', 'back', 'left', 'right', 'top', 'bottom'];
+    const diceImages = ['dice1.png', 'dice2.png', 'dice3.png', 'dice4.png', 'dice5.png', 'dice6.png'];
+
+    const rotations = {
+        1: "rotateX(0deg) rotateY(0deg)",
+        2: "rotateX(0deg) rotateY(180deg)",
+        3: "rotateX(0deg) rotateY(90deg)",
+        4: "rotateX(0deg) rotateY(-90deg)",
+        5: "rotateX(90deg)",
+        6: "rotateX(-90deg)"
+    };
+
+    function initDice(dice) {
+        faces.forEach((face, index) => {
+            const faceElement = document.createElement('div');
+            faceElement.classList.add('face', face);
+            faceElement.style.backgroundImage = `url('${diceImages[index]}')`;
+            dice.appendChild(faceElement);
+        });
+    }
+
+    function getRandomNumber() {
+        return Math.floor(Math.random() * 6) + 1;
+    }
+
+    function rollDice() {
+        const dice1 = document.getElementById("dice1");
+        const dice2 = document.getElementById("dice2");
+
+        // Adding extra random rotations for realism
+        const randomExtraRotation = () => `${Math.floor(Math.random() * 5) * 360}deg`;
+
+        const finalRotation1 = rotations[getRandomNumber()] + ` rotateZ(${randomExtraRotation()})`;
+        const finalRotation2 = rotations[getRandomNumber()] + ` rotateZ(${randomExtraRotation()})`;
+
+        dice1.style.transform = finalRotation1;
+        dice2.style.transform = finalRotation2;
+    }
+
+    initDice(document.getElementById("dice1"));
+    initDice(document.getElementById("dice2"));
+</script>
+
+</body>
+</html>
+

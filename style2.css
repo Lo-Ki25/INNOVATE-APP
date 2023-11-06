@@ -1,0 +1,267 @@
+.container {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start; /* Alignement en haut pour aligner les images avec le haut du tableau */
+    height: 100vh;
+    padding-top: 80px;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux images de passer à la ligne suivante après 4 images */
+    width: 240px; /* Largeur totale pour 4 images (50px * 4 + marges) */
+    margin-right:   0px; /* Espacement à droite du conteneur d'images */
+}
+
+.images img {
+    width: 96px;
+    height: 96px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: 240px;
+    width: 870px;
+    height: 550px;
+    position: fixed;
+
+}
+
+table, th, td {
+    border: 3px solid #092362;
+    border-radius: 5px;
+
+}
+
+th, td {
+    width: 80px;
+    height: 70px;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px; /* Taille de la police */
+    font-weight: normal; /* Poids de la police */
+    color: black; /* Couleur du texte */
+}
+
+.images img:hover {
+    border: 2px solid #0293fa;
+    border-radius: 4px;
+}
+
+
+td img {
+    width: 80px; /* Ajustement de la largeur de l'image dans la cellule */
+    height: 70px; /* Ajustement de la hauteur de l'image dans la cellule */
+    border-radius: 6px;
+    border: 2px solid #003cff;
+
+}
+body {
+    background-image: url('INNOVATE1.png'); /* Remplacez par le chemin de votre image */
+    background-size: 100% 105%; /* Assure que l'image couvre toute la page */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-attachment: fixed; /* Fixe l'arrière-plan lors du défilement */
+    background-position: center center; /* Centre l'image */
+}
+
+
+
+
+
+.images {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll; /* Permet le défilement vertical */
+    max-height: 550px; /* Hauteur maximale avant le défilement */
+    margin-right: 2px;
+    position: fixed;
+}
+
+.images img {
+    margin-bottom: 5px;
+}
+
+
+
+#resetButton {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 80px;
+    cursor: pointer;
+}
+
+#resetButton:hover {
+    background-color: #45a049;
+}
+/* Styles existants */
+/* ... */
+
+/* Media Query pour les écrans jusqu'à 600px de large */
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    .images {
+        width: 100%;
+        max-height: 300px;
+        overflow-y: auto;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .images img {
+        width: 46px; /* Ajustez la taille des images */
+        height: 46px;
+        margin: 2px;
+    }
+
+    table {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    th, td {
+        width: 60px; /* Ajustez la taille des cellules */
+        height: 50px;
+        font-size: 12px; /* Taille de police plus petite */
+    }
+
+    #resetButton {
+        margin-left: 0;
+        padding: 8px 16px;
+    }
+
+    .container1 {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .dice {
+        width: 70px;
+        height: 70px;
+    }
+
+    .face {
+        height: 70px;
+        width: 70px;
+    }
+}
+
+/* Media Query pour les écrans jusqu'à 768px de large */
+@media screen and (max-width: 768px) {
+    /* Ajoutez ici des styles spécifiques pour les tablettes */
+}
+/* Feedback visuel pour le glisser-déposer */
+td:hover {
+    border: 2px dashed #0293fa; /* Style de bordure lors du survol */
+}
+
+/* Media Queries pour les petits écrans */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .images {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .images img {
+        width: 70px; /* Taille réduite pour les petits écrans */
+        height: 70px;
+    }
+
+    table {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    th, td {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

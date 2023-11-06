@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Innovate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Application Innovate</h1>
+<div class="container">
+    <div class="tableau">
+        <table>
+            <thead>
+            <tr>
+                <th></th> <!-- Première case vide -->
+                <th>Problème 1</th>
+                <th>Problème 2</th>
+                <th>Problème 3</th>
+                <th>Problème 4</th>
+                <th>Problème 5</th>
+                <th>Problème 6</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Compétence 1</td>
+                <td class="droppable" data-pos="1.1"></td>
+                <td class="droppable" data-pos="1.2"></td>
+                <td class="droppable" data-pos="1.3"></td>
+                <td class="droppable" data-pos="1.4"></td>
+                <td class="droppable" data-pos="1.5"></td>
+                <td class="droppable" data-pos="1.6"></td>
+            </tr>
+            <tr>
+                <td>Compétence 2</td>
+                <td class="droppable" data-pos="2.1"></td>
+                <td class="droppable" data-pos="2.2"></td>
+                <td class="droppable" data-pos="2.3"></td>
+                <td class="droppable" data-pos="2.4"></td>
+                <td class="droppable" data-pos="2.5"></td>
+                <td class="droppable" data-pos="2.6"></td>
+            </tr>
+            <tr>
+                <td>Compétence 3</td>
+                <td class="droppable" data-pos="3.1"></td>
+                <td class="droppable" data-pos="3.2"></td>
+                <td class="droppable" data-pos="3.3"></td>
+                <td class="droppable" data-pos="3.4"></td>
+                <td class="droppable" data-pos="3.5"></td>
+                <td class="droppable" data-pos="3.6"></td>
+            </tr>
+            <tr>
+                <td>Compétence 4</td>
+                <td class="droppable" data-pos="4.1"></td>
+                <td class="droppable" data-pos="4.2"></td>
+                <td class="droppable" data-pos="4.3"></td>
+                <td class="droppable" data-pos="4.4"></td>
+                <td class="droppable" data-pos="4.5"></td>
+                <td class="droppable" data-pos="4.6"></td>
+            </tr>
+            <tr>
+                <td>Compétence 5</td>
+                <td class="droppable" data-pos="5.1"></td>
+                <td class="droppable" data-pos="5.2"></td>
+                <td class="droppable" data-pos="5.3"></td>
+                <td class="droppable" data-pos="5.4"></td>
+                <td class="droppable" data-pos="5.5"></td>
+                <td class="droppable" data-pos="5.6"></td>
+            </tr>
+            <tr>
+                <td>Compétence 6</td>
+                <td class="droppable" data-pos="6.1"></td>
+                <td class="droppable" data-pos="6.2"></td>
+                <td class="droppable" data-pos="6.3"></td>
+                <td class="droppable" data-pos="6.4"></td>
+                <td class="droppable" data-pos="6.5"></td>
+                <td class="droppable" data-pos="6.6"></td>
+            </tr>
+            <!-- Répétez pour les autres lignes -->
+            </tbody>
+        </table>
+        <!-- Juste en dessous de votre tableau -->
+        <button id="resetButton">Réinitialiser</button>
+
+    </div>
+    <div class="images-container">
+    <div class="images">
+        <img src="1.png" alt="Image 1" class="draggable" data-id="1">
+        <img src="2.png" alt="Image 2" class="draggable" data-id="2">
+        <img src="3.png" alt="Image 3" class="draggable" data-id="3">
+        <img src="4.png" alt="Image 4" class="draggable" data-id="4">
+        <img src="5.png" alt="Image 5" class="draggable" data-id="5">
+        <img src="6.png" alt="Image 6" class="draggable" data-id="6">
+        <img src="7.png" alt="Image 7" class="draggable" data-id="7">
+        <img src="8.png" alt="Image 8" class="draggable" data-id="8">
+        <img src="9.png" alt="Image 9" class="draggable" data-id="9">
+        <img src="10.png" alt="Image 10" class="draggable" data-id="10">
+        <img src="11.png" alt="Image 11" class="draggable" data-id="11">
+        <img src="12.png" alt="Image 12" class="draggable" data-id="12">
+        <img src="13.png" alt="Image 13" class="draggable" data-id="13">
+        <img src="14.png" alt="Image 14" class="draggable" data-id="14">
+        <img src="15.png" alt="Image 15" class="draggable" data-id="15">
+        <img src="16.png" alt="Image 16" class="draggable" data-id="16">
+        <img src="17.png" alt="Image 17" class="draggable" data-id="17">
+        <img src="18.png" alt="Image 18" class="draggable" data-id="18">
+        <img src="19.png" alt="Image 19" class="draggable" data-id="19">
+        <img src="20.png" alt="Image 20" class="draggable" data-id="20">
+        <img src="6.png" alt="Image 21" class="draggable" data-id="21">
+        <img src="6.png" alt="Image 22" class="draggable" data-id="22">
+        <img src="6.png" alt="Image 23" class="draggable" data-id="23">
+        <img src="6.png" alt="Image 24" class="draggable" data-id="24">
+        <img src="6.png" alt="Image 25" class="draggable" data-id="25">
+        <img src="6.png" alt="Image 26" class="draggable" data-id="26">
+
+    </div>
+</div>
+</div>
+<div class="container1">
+    <button onclick="rollDice()">Lancer les dés</button>
+    <div class="dice" id="dice1"></div>
+    <div class="dice" id="dice2"></div>
+</div>
+<script>
+    // scripts.js (ajout)
+
+    document.getElementById('resetButton').addEventListener('click', function() {
+        // Sélectionner toutes les cellules du tableau
+        var cells = document.querySelectorAll('.tableau td');
+
+        // Parcourir chaque cellule et supprimer son contenu (s'il y en a)
+        cells.forEach(function(cell) {
+            cell.innerHTML = '';
+        });
+    });
+
+
+</script>
+<script>
+    const faces = ['front', 'back', 'left', 'right', 'top', 'bottom'];
+    const diceImages = ['dice1.png', 'dice2.png', 'dice3.png', 'dice4.png', 'dice5.png', 'dice6.png'];
+
+    const rotations = {
+        1: "rotateX(0deg) rotateY(0deg)",
+        2: "rotateX(0deg) rotateY(180deg)",
+        3: "rotateX(0deg) rotateY(90deg)",
+        4: "rotateX(0deg) rotateY(-90deg)",
+        5: "rotateX(90deg)",
+        6: "rotateX(-90deg)"
+    };
+
+    function initDice(dice) {
+        faces.forEach((face, index) => {
+            const faceElement = document.createElement('div');
+            faceElement.classList.add('face', face);
+            faceElement.style.backgroundImage = `url('${diceImages[index]}')`;
+            dice.appendChild(faceElement);
+        });
+    }
+
+    function getRandomNumber() {
+        return Math.floor(Math.random() * 6) + 1;
+    }
+
+    function rollDice() {
+        const dice1 = document.getElementById("dice1");
+        const dice2 = document.getElementById("dice2");
+
+        // Adding extra random rotations for realism
+        const randomExtraRotation = () => `${Math.floor(Math.random() * 5) * 360}deg`;
+
+        const finalRotation1 = rotations[getRandomNumber()] + ` rotateZ(${randomExtraRotation()})`;
+        const finalRotation2 = rotations[getRandomNumber()] + ` rotateZ(${randomExtraRotation()})`;
+
+        dice1.style.transform = finalRotation1;
+        dice2.style.transform = finalRotation2;
+    }
+
+    initDice(document.getElementById("dice1"));
+    initDice(document.getElementById("dice2"));
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de compétences</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="manifest" href="/manifest.json">
+
+    <style>
+
+
+        .container1 {
+            display: flex;
+            align-items: self-end;  /* Centre les éléments verticalement */
+            gap: 30px;
+            margin-left: 1085px;
+            margin-top: -280px;
+            position: fixed ;
+        }
+
+        .dice {
+            width: 90px;
+            height: 90px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .face {
+            position: absolute;
+            height: 90px;
+            width: 90px;
+            background: #9bdcf1;
+            border: 0px solid #ccc;
+            background-size: cover;
+        }
+
+        .front  { transform: rotateY(0deg)   translateZ(50px); }
+        .back   { transform: rotateY(180deg) translateZ(50px); }
+        .left   { transform: rotateY(-90deg) translateZ(50px); }
+        .right  { transform: rotateY(90deg)  translateZ(50px); }
+        .top    { transform: rotateX(90deg)  translateZ(50px); }
+        .bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+        button {
+            margin-left: 30px;
+            padding: 10px 10px;
+            font-size: 15px;
+            cursor: pointer;
+            horiz-align: right;
+
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="images">
+        <!-- Images à glisser-déposer -->
+        <div class="image-row">
+            <img src="1-1.jpg" id="1" draggable="true">
+            <img src="1-2.jpg" id="2" draggable="true">
+            <img src="1-3.jpg" id="3" draggable="true">
+            <img src="1-4.jpg" id="4" draggable="true">
+            <img src="1-5.jpg" id="5" draggable="true">
+            <img src="1-6.jpg" id="6" draggable="true">
+            <img src="2-1.jpg" id="7" draggable="true">
+            <img src="2-2.jpg" id="8" draggable="true">
+            <img src="2-3.jpg" id="9" draggable="true">
+            <img src="2-4.jpg" id="10" draggable="true">
+            <img src="2-5.jpg" id="11" draggable="true">
+            <img src="2-6.jpg" id="12" draggable="true">
+            <img src="3-1.jpg" id="13" draggable="true">
+            <img src="3-2.jpg" id="14" draggable="true">
+            <img src="3-3.jpg" id="15" draggable="true">
+            <img src="3-4.jpg" id="16" draggable="true">
+            <img src="3-5.jpg" id="17" draggable="true">
+            <img src="3-6.jpg" id="18" draggable="true">
+            <img src="4-1.jpg" id="19" draggable="true">
+            <img src="4-2.jpg" id="20" draggable="true">
+            <img src="4-3.jpg" id="21" draggable="true">
+            <img src="4-4.jpg" id="22" draggable="true">
+            <img src="4-5.jpg" id="23" draggable="true">
+            <img src="4-6.jpg" id="24" draggable="true">
+            <img src="5-1.jpg" id="25" draggable="true">
+            <img src="5-2.jpg" id="26" draggable="true">
+            <img src="5-3.jpg" id="27" draggable="true">
+            <img src="5-4.jpg" id="28" draggable="true">
+            <img src="5-5.jpg" id="29" draggable="true">
+            <img src="5-6.jpg" id="30" draggable="true">
+            <img src="6-1.jpg" id="31" draggable="true">
+            <img src="6-2.jpg" id="32" draggable="true">
+            <img src="6-3.jpg" id="33" draggable="true">
+            <img src="6-4.jpg" id="34" draggable="true">
+            <img src="6-5.jpg" id="35" draggable="true">
+            <img src="6-6.jpg" id="36" draggable="true">
+
+
+
+            <!-- ... ajoutez les autres images de la même manière -->
+        </div>
+        <!-- ... ajoutez d'autres lignes d'images de la même manière -->
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th></th>
+            <th>Maîtrise du multimédia</th>
+            <th>Maîtrise de plusieurs langues</th>
+            <th>Permis de conduire toutes catégories</th>
+            <th>Excellente communication et habiletés de négociation</th>
+            <th>Connaissance de la culture et histoire du Maroc</th>
+            <th>Compétences manuelles</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Authenticité des produits</td>
+            <td id="1"></td>
+            <td id="2"></td>
+            <td id="3"></td>
+            <td id="4"></td>
+            <td id="5"></td>
+            <td id="6"></td>
+        </tr>
+        <tr>
+            <td>Service client de qualité</td>
+            <td id="7"></td>
+            <td id="8"></td>
+            <td id="9"></td>
+            <td id="10"></td>
+            <td id="11"></td>
+            <td id="12"></td>
+        </tr>
+        <tr>
+            <td>Transparence</td>
+            <td id="13"></td>
+            <td id="14"></td>
+            <td id="15"></td>
+            <td id="16"></td>
+            <td id="17"></td>
+            <td id="18"></td>
+        </tr>
+        <tr>
+            <td>Service personnalisé</td>
+            <td id="19"></td>
+            <td id="20"></td>
+            <td id="21"></td>
+            <td id="22"></td>
+            <td id="23"></td>
+            <td id="24"></td>
+        </tr>
+        <tr>
+            <td>Variété étendue de produits</td>
+            <td id="25"></td>
+            <td id="26"></td>
+            <td id="27"></td>
+            <td id="28"></td>
+            <td id="29"></td>
+            <td id="30"></td>
+        </tr>
+        <tr>
+            <td>Tarifs compétitifs</td>
+            <td id="31"></td>
+            <td id="32"></td>
+            <td id="33"></td>
+            <td id="34"></td>
+            <td id="35"></td>
+            <td id="36"></td>
+        </tr>
+        <!-- ... ajoutez les autres compétences et cellules de la même manière -->
+        </tbody>
+    </table>
+
+</div>
+<button id="resetButton">Réinitialiser</button>
+
+<div class="container1">
+    <button onclick="rollDice()">Lancer les dés</button>
+    <div class="dice" id="dice1"></div>
+    <div class="dice" id="dice2"></div>
+
+</div>
+<script>
+    const faces = ['front', 'back', 'left', 'right', 'top', 'bottom'];
+    const diceImages = ['dice1.png', 'dice2.png', 'dice3.png', 'dice4.png', 'dice5.png', 'dice6.png'];
+
+    const rotations = {
+        1: "rotateX(0deg) rotateY(0deg)",
+        2: "rotateX(0deg) rotateY(180deg)",
+        3: "rotateX(0deg) rotateY(90deg)",
+        4: "rotateX(0deg) rotateY(-90deg)",
+        5: "rotateX(90deg)",
+        6: "rotateX(-90deg)"
+    };
+
+    function initDice(dice) {
+        faces.forEach((face, index) => {
+            const faceElement = document.createElement('div');
+            faceElement.classList.add('face', face);
+            faceElement.style.backgroundImage = `url('${diceImages[index]}')`;
+            dice.appendChild(faceElement);
+        });
+    }
+
+    function getRandomNumber() {
+        return Math.floor(Math.random() * 6) + 1;
+    }
+
+    function rollDice() {
+        const dice1 = document.getElementById("dice1");
+        const dice2 = document.getElementById("dice2");
+
+        // Adding extra random rotations for realism
+        const randomExtraRotation = () => `${Math.floor(Math.random() * 5) * 360}deg`;
+
+        const finalRotation1 = rotations[getRandomNumber()] + ` rotateZ(${randomExtraRotation()})`;
+        const finalRotation2 = rotations[getRandomNumber()] + ` rotateZ(${randomExtraRotation()})`;
+
+        dice1.style.transform = finalRotation1;
+        dice2.style.transform = finalRotation2;
+    }
+
+    initDice(document.getElementById("dice1"));
+    initDice(document.getElementById("dice2"));
+</script>
+
+<script src="script2.js"></script>
+</body>
+</html>
