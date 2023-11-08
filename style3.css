@@ -1,0 +1,107 @@
+/* Styles globaux */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('INNOVATE.png');
+    background-size: 100% 105%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+/* Section Slider Bar à Gauche */
+.slider-bar {
+    /* Styles pour la section Slider Bar */
+    background: #fff; /* Couleur d'arrière-plan */
+    padding: 20px;
+}
+
+.slider-bar .image-row {
+    display: flex;
+    flex-direction: column;
+    /* Ajoutez des styles pour la liste d'images ici */
+}
+
+.slider-bar .image-row img {
+    width: 50px; /* Ajustez la taille des images */
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    /* Ajoutez d'autres styles d'image ici */
+}
+
+/* Section Tableau de 7x7 et Texte des Règles */
+.table-container {
+    display: flex;
+    /* Ajoutez des styles pour la section Tableau de 7x7 ici */
+}
+
+.table-container table {
+    border-collapse: collapse;
+    width: 50%; /* Ajustez la largeur du tableau */
+    margin: 20px; /* Ajoutez de la marge autour du tableau */
+    background: #fff; /* Couleur d'arrière-plan */
+    border: 3px solid #092362;
+    border-radius: 5px;
+}
+
+.table-container th, .table-container td {
+    width: 80px;
+    height: 70px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: normal;
+    color: black;
+    border: 3px solid #092362;
+    border-radius: 5px;
+    /* Ajoutez d'autres styles pour les cellules du tableau ici */
+}
+
+.table-container .rules {
+    /* Ajoutez des styles pour la section de texte des règles ici */
+    padding: 20px;
+    background: #fff; /* Couleur d'arrière-plan */
+    border: 3px solid #092362;
+    border-radius: 5px;
+}
+
+/* Section Deux Dés Fixés à Droite */
+.dice-container {
+    /* Ajoutez des styles pour la section de dés ici */
+    margin: 20px;
+}
+
+.dice-container button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px; /* Ajoutez de la marge autour du bouton */
+}
+
+.dice-container button:hover {
+    background-color: #45a049;
+}
+
+.dice-container .dice {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in-out;
+    /* Ajoutez d'autres styles pour les dés ici */
+}
+/* Ajoutez des styles pour les faces des dés (front, back, left, right, top, bottom) ici */
+
+/* Section Texte sur les Règles du Jeu à Gauche */
+.rules-section {
+    /* Ajoutez des styles pour la section de texte sur les règles du jeu ici */
+    background: #fff; /* Couleur d'arrière-plan */
+    padding: 20px;
+    border: 3px solid #092362;
+    border-radius: 5px;
+}

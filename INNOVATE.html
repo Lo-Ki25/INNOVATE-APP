@@ -7,51 +7,7 @@
     <link rel="stylesheet" href="style2.css">
     <link rel="manifest" href="/manifest.json">
 
-    <style>
 
-
-        .container1 {
-            display: flex;
-            align-items: self-end;  /* Centre les éléments verticalement */
-            gap: 30px;
-            margin-left: 1085px;
-            margin-top: -280px;
-            position: fixed ;
-        }
-
-        .dice {
-            width: 90px;
-            height: 90px;
-            position: relative;
-            transform-style: preserve-3d;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .face {
-            position: absolute;
-            height: 90px;
-            width: 90px;
-            background: #9bdcf1;
-            border: 0px solid #ccc;
-            background-size: cover;
-        }
-
-        .front  { transform: rotateY(0deg)   translateZ(50px); }
-        .back   { transform: rotateY(180deg) translateZ(50px); }
-        .left   { transform: rotateY(-90deg) translateZ(50px); }
-        .right  { transform: rotateY(90deg)  translateZ(50px); }
-        .top    { transform: rotateX(90deg)  translateZ(50px); }
-        .bottom { transform: rotateX(-90deg) translateZ(50px); }
-
-        button {
-            margin-left: 30px;
-            padding: 10px 10px;
-            font-size: 15px;
-            cursor: pointer;
-            horiz-align: right;
-
-        }
-    </style>
 </head>
 <body>
 <div class="container">
@@ -171,9 +127,9 @@
         <!-- ... ajoutez les autres compétences et cellules de la même manière -->
         </tbody>
     </table>
-
+    <button id="resetButton">Réinitialiser</button>
 </div>
-<button id="resetButton">Réinitialiser</button>
+
 
 <div class="container1">
     <button onclick="rollDice()">Lancer les dés</button>
@@ -181,49 +137,6 @@
     <div class="dice" id="dice2"></div>
 
 </div>
-<script>
-    const faces = ['front', 'back', 'left', 'right', 'top', 'bottom'];
-    const diceImages = ['dice1.png', 'dice2.png', 'dice3.png', 'dice4.png', 'dice5.png', 'dice6.png'];
-
-    const rotations = {
-        1: "rotateX(0deg) rotateY(0deg)",
-        2: "rotateX(0deg) rotateY(180deg)",
-        3: "rotateX(0deg) rotateY(90deg)",
-        4: "rotateX(0deg) rotateY(-90deg)",
-        5: "rotateX(90deg)",
-        6: "rotateX(-90deg)"
-    };
-
-    function initDice(dice) {
-        faces.forEach((face, index) => {
-            const faceElement = document.createElement('div');
-            faceElement.classList.add('face', face);
-            faceElement.style.backgroundImage = `url('${diceImages[index]}')`;
-            dice.appendChild(faceElement);
-        });
-    }
-
-    function getRandomNumber() {
-        return Math.floor(Math.random() * 6) + 1;
-    }
-
-    function rollDice() {
-        const dice1 = document.getElementById("dice1");
-        const dice2 = document.getElementById("dice2");
-
-        // Adding extra random rotations for realism
-        const randomExtraRotation = () => `${Math.floor(Math.random() * 5) * 360}deg`;
-
-        const finalRotation1 = rotations[getRandomNumber()] + ` rotateZ(${randomExtraRotation()})`;
-        const finalRotation2 = rotations[getRandomNumber()] + ` rotateZ(${randomExtraRotation()})`;
-
-        dice1.style.transform = finalRotation1;
-        dice2.style.transform = finalRotation2;
-    }
-
-    initDice(document.getElementById("dice1"));
-    initDice(document.getElementById("dice2"));
-</script>
 
 <script src="script2.js"></script>
 </body>
