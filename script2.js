@@ -52,3 +52,44 @@ if ('serviceWorker' in navigator) {
             console.log('Erreur lors de lenregistrement du Service Worker:', error);
         });
 }
+const faces = ['front', 'back', 'left', 'right', 'top', 'bottom'];
+const diceImages = ['dice1.png', 'dice2.png', 'dice3.png', 'dice4.png', 'dice5.png', 'dice6.png'];
+
+const rotations = {
+    1: "rotateX(0deg) rotateY(0deg)",
+    2: "rotateX(0deg) rotateY(180deg)",
+    3: "rotateX(0deg) rotateY(90deg)",
+    4: "rotateX(0deg) rotateY(-90deg)",
+    5: "rotateX(90deg)",
+    6: "rotateX(-90deg)"
+};
+
+function initDice(dice) {
+    faces.forEach((face, index) => {
+        const faceElement = document.createElement('div');
+        faceElement.classList.add('face', face);
+        faceElement.style.backgroundImage = `url('${diceImages[index]}')`;
+        dice.appendChild(faceElement);
+    });
+}
+
+function getRandomNumber() {
+    return Math.floor(Math.random() * 6) + 1;
+}
+
+function rollDice() {
+    const dice1 = document.getElementById("dice1");
+    const dice2 = document.getElementById("dice2");
+
+    // Adding extra random rotations for realism
+    const randomExtraRotation = () => `${Math.floor(Math.random() * 5) * 360}deg`;
+
+    const finalRotation1 = rotations[getRandomNumber()] + ` rotateZ(${randomExtraRotation()})`;
+    const finalRotation2 = rotations[getRandomNumber()] + ` rotateZ(${randomExtraRotation()})`;
+
+    dice1.style.transform = finalRotation1;
+    dice2.style.transform = finalRotation2;
+}
+
+initDice(document.getElementById("dice1"));
+initDice(document.getElementById("dice2"));
